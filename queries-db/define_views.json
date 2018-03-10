@@ -1,0 +1,22 @@
+{
+  "_id": "_design/application",
+  "_rev": "1-C1687D17",
+  "views": {
+    "new_user": {
+      "map": "function(doc) {
+                    if(doc.type === "user" && doc.id_user) {
+                        emit(doc.type, doc.id_user);
+                    }
+                }",
+      "reduce": "function(keys, values) { ... }"
+    },
+    "questions_unanswered": {
+        "map": "function(doc) {
+        if(doc.type === "vote" && doc.id_user && doc.id_question && doc.bool) {
+          emit(doc.type, doc.id_user, doc.id_question, doc.bool);
+         }
+        }",
+      "reduce": "function(keys, values) { ... }"
+    }
+  }
+}
