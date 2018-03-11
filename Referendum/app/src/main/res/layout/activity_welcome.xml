@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="hypertux.be.app1.controlers.WelcomeActivity"
+    android:weightSum="12">
+
+    <ImageView
+        android:id="@+id/activity_welcome_logo_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:padding="30dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/activity_welcome_code_itsme_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Entrer votre code It's Me :" />
+
+    <EditText
+        android:id="@+id/activity_welcome_code_itsme_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:inputType="number"
+        android:singleLine="true"
+        android:maxLength="5"
+        android:textColor="#ff4612" />
+
+    <ImageButton
+        android:id="@+id/activity_welcome_connect_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="3"
+        android:src="@drawable/itsme"
+        android:background="@null"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Plus d'infos sur it's me"/>
+
+</LinearLayout>
