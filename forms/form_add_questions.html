@@ -1,3 +1,5 @@
+<div id="container">
+
 <head>
  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -22,57 +24,25 @@
 <div class="form-group">
   <label class="label-control" for="textinput">Nombre de questions</label>
   <div class="div-control">
-  <input id="textinput" name="textinput" placeholder="1" class="form-control input-md" type="text">
-
+  <input id="textinput-amount" name="textinput-amount" placeholder="1" class="form-control input-md" type="text">
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
   <label class="label-control" for="textinput">Question 1</label>
-  <div class="div-control">
-  <input id="textinput" name="textinput" placeholder="Avez-vous bien mangé ?" class="form-control input-md" type="text">
-
+  <div class="div-control" id="div_questions">
+  <script>
+            var div = document.getElementById('div_questions');
+            var div_text = document.getElementById('textinput-amount');
+            var input = div_text.value;
+            var amount = parseInt(input);
+            for (i = 0; i < amount; i++) {
+                div.innerHTML += '<input id="textinput" name="textinput" placeholder="Introduisez votre question" class="input-control" type="text">';
+            }
+</script>
   </div>
 </div>
-
 </fieldset>
 </form>
-
-
-<table class="steelBlueCols">
-<thead>
-<tr>
-<th>head1</th>
-<th>head2</th>
-<th>head3</th>
-<th>head4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cell1_1</td>
-<td>cell2_1</td>
-<td>cell3_1</td>
-<td>cell4_1</td>
-</tr>
-<tr>
-<td>cell1_2</td>
-<td>cell2_2</td>
-<td>cell3_2</td>
-<td>cell4_2</td>
-</tr>
-<tr>
-<td>cell1_3</td>
-<td>cell2_3</td>
-<td>cell3_3</td>
-<td>cell4_3</td>
-</tr>
-<tr>
-<td>cell1_4</td>
-<td>cell2_4</td>
-<td>cell3_4</td>
-<td>cell4_4</td>
-</tr>
-</tbody>
-</table>
+</div>
